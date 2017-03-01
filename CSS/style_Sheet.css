@@ -1,0 +1,149 @@
+body{
+    min-width: 1100px;
+    font-family: sans-serif;
+    background-color: #0a5500; 
+    text-decoration-color: #ff5000;}
+
+a{
+    text-decoration: none;
+    color:black;}
+
+a:visited{color: #000000;}
+
+a:hover{color: yellow;}
+
+a:focus{color:yellow;}
+
+.NavBar{font-size: 20px;
+        width: 100%}
+
+table, td{text-align: center}
+
+table{width: 100%;}
+
+button{width: 100px;}
+
+.titleTable{
+    width: 33%;
+    font-size: 24px;}
+
+.pTable{
+    width: 30%;
+    color: yellow;
+    font-size: 30px;}
+
+.pScore{
+    color:red;
+    font-size: 70px;}
+
+.tScore{
+    color:yellow;
+    font-size:30px;}
+
+.sideNumber{
+    color: yellow;
+    width: 40px;
+    height: 50px;}
+
+.playerTitle{
+    color: yellow;
+    font-size: 25px;
+    width: 150px;}
+
+#cricketBoard{width: 100%;}
+
+#scoreboard{
+    padding-top: 15px;
+    float: left;
+    width: 60%;}
+
+#scoreButtons{
+    padding-top: 30px;
+    float: right;
+    width: 40%;}
+
+#p1Score{
+    color: red;
+    font-size: 25px;
+    width: 100px;}
+
+#p2Score{
+    color: red;
+    font-size: 25px;
+    width: 100px;}
+
+#roundCountLabel{
+    float: left;
+    color: black;}
+
+#throwWordLabel{
+    float: right;
+    color: black;}
+
+#roundWordLabel{
+    float: right;
+    color: black;}
+
+#throwCountLabel{
+    float: left;
+    color: black;}
+
+#TheNumber{
+    color: yellow;
+    font-size: 40px;}
+
+#doubleButtonsDiv{
+    padding-top: 50px;}
+
+#tripleButtonsDiv{
+    padding-top: 15px;}
+
+#roundTD, #throwTD{width: 150px;}
+
+#imgTD, #img2TD{width: 80px;}
+
+.scoreTD{width: 80px;}
+
+#p120Mark{color: red;}
+#p220Mark{color: red;}
+#p119Mark{color: red;}
+#p219Mark{color: red;}
+#p118Mark{color: red;}
+#p218Mark{color: red;}
+#p117Mark{color: red;}
+#p217Mark{color: red;}
+#p116Mark{color: red;}
+#p216Mark{color: red;}
+#p115Mark{color: red;}
+#p215Mark{color: red;}
+#p16Mark{color: red;}
+#p26Mark{color: red;}
+#p15Mark{color: red;}
+#p25Mark{color: red;}
+#p14Mark{color: red;}
+#p24Mark{color: red;}
+#p13Mark{color: red;}
+#p23Mark{color: red;}
+#p12Mark{color: red;}
+#p22Mark{color: red;}
+#p11Mark{color: red;}
+#p21Mark{color: red;}
+#p1BullMark{color: red;}
+#p2BullMark{color: red;}
+#p1num1{color: red;}
+#p2num1{color: red;}
+#p1num2{color: red;}
+#p2num2{color: red;}
+#p1num3{color: red;}
+#p2num3{color: red;}
+#p1num4{color: red;}
+#p2num4{color: red;}
+#p1num5{color: red;}
+#p2num5{color: red;}
+#p1num6{color: red;}
+#p2num6{color: red;}
+
+#P1Marker{float: left;}
+#P2Marker{float: right;}
+#cP1Mark{float:right;}
+#cP2Mark{float:right;}

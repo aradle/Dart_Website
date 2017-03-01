@@ -1,0 +1,156 @@
+<!--------------------------------------------
+-       AJ Radle                             -
+-       Independent Study                    -
+-       January 12, 2017                     -
+----------------------------------------------
+-  TO DO:                                    -
+-       +Add a undo score button             -
+-       +When counter gets to 10 it shifts   -
+--------------------------------------------->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Darts Score Keeper</title> 
+        <link rel="stylesheet" href="../CSS/style_Sheet.css"/>
+        <script src="../JavaScript/cricketScript.js"></script>
+    </head>
+      
+    <body>
+        <!--This div is for the header and navigation-->
+        <div>
+            <!--Title Bar with Images-->
+            <table cellpadding = "2">
+                <tr>
+                    <td class= "titleTable">
+                       <a href="../index.html"><img src="../Images/SingleDartRight.png" alt="Dart"></a> 
+                    </td>
+                    <td class= "titleTable" text-align:middle>
+                        <h1>Cricket</h1>
+                    </td>
+                    <td class= "titleTable">
+                       <a href="../index.html"><img src="../Images/SingleDartLeft.png" alt="Dart"></a> 
+                    </td>
+                </tr>
+            </table>
+            
+            <!--Navigation Bar-->
+            <table class="NavBar" border="1">
+                <tr>
+                    <td width = 20%><a href="../ThreeZeroOne/index.html">301</a></td>
+                    <td width = 20%><a href="../Regular_Cricket/index.html">Cricket</a></td>
+                    <td width = 20%><a href="../Low_Ball_Cricket/index.html">Low Ball</a></td>
+                    <td width = 20%><a href="../Mixed_Cricket/index.html">Mixed</a></td>
+                    <td width = 20%><a href="../Bermuda_Triangle/index.html">Bermuda Triangle</a></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--This div is for the scoreboard-->
+        <div id="scoreboard">
+            <table id="cricketBoard">
+                <tr>
+                    <td></td>
+                    <td id="imgTD"><img src ="../Images/DartBoard.png" alt="Turn Marker" id="cP1Mark"></td>
+                    <td class="playerTitle">Player 1:</td>
+                    <td class="scoreTD"><label id="p1Score">0</label></td>
+                    <td id="img2TD"><img src ="../Images/DartBoard.png" alt="Turn Marker" id="cP2Mark" style="display:none"></td>
+                    <td class="playerTitle">Player 2:</td>
+                    <td class="scoreTD"><label id="p2Score">0</label></td>
+                    
+                </tr>
+            </table>
+            <table id="cricketBoard">
+                <tr>
+                    <td class="sideNumber">20</td>
+                    <td colspan="3"><label id="p120Mark">0</label></td>
+                    <td colspan="3"><label id="p220Mark">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber">19</td>
+                    <td colspan="3"><label id="p119Mark">0</label></td>
+                    <td colspan="3"><label id="p219Mark">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber">18</td>
+                    <td colspan="3"><label id="p118Mark">0</label></td>
+                    <td colspan="3"><label id="p218Mark">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber">17</td>
+                    <td colspan="3"><label id="p117Mark">0</label></td>
+                    <td colspan="3"><label id="p217Mark">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber">16</td>
+                    <td colspan="3"><label id="p116Mark">0</label></td>
+                    <td colspan="3"><label id="p216Mark">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber">15</td>
+                    <td colspan="3"><label id="p115Mark">0</label></td>
+                    <td colspan="3"><label id="p215Mark">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber">Bull</td>
+                    <td colspan="3"><label id="p1BullMark">0</label></td>
+                    <td colspan="3"><label id="p2BullMark">0</label></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--This div is for the score buttons-->
+        <div id="scoreButtons">
+            <table>
+                <tr>
+                    <td id="roundTD"><label id="roundWordLabel">Round: </label></td>
+                    <td><label id="roundCountLabel">1</label></td>
+                    <td id="throwTD"><label id="throwWordLabel">Throw: </label></td>
+                    <td><label id="throwCountLabel">1</label></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><button type="button" onclick="updateScore(20, 1)">20</button></td>
+                    <td><button type="button" onclick="updateScore(19, 1)">19</button></td>
+                    <td><button type="button" onclick="updateScore(18, 1)">18</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="updateScore(20, 2)">Double 20</button></td>
+                    <td><button type="button" onclick="updateScore(19, 2)">Double 19</button></td>
+                    <td><button type="button" onclick="updateScore(18, 2)">Double 18</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="updateScore(20, 3)">Triple 20</button></td>
+                    <td><button type="button" onclick="updateScore(19, 3)">Triple 19</button></td>
+                    <td><button type="button" onclick="updateScore(18, 3)">Triple 18</button></td>
+                </tr>
+                <tr><td><p></p></td></tr>
+                <tr>
+                    <td><button type="button" onclick="updateScore(17, 1)">17</button></td>
+                    <td><button type="button" onclick="updateScore(16, 1)">16</button></td>
+                    <td><button type="button" onclick="updateScore(15, 1)">15</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="updateScore(17, 2)">Double 17</button></td>
+                    <td><button type="button" onclick="updateScore(16, 2)">Double 16</button></td>
+                    <td><button type="button" onclick="updateScore(15, 2)">Double 15</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="updateScore(17, 3)">Triple 17</button></td>
+                    <td><button type="button" onclick="updateScore(16, 3)">Triple 16</button></td>
+                    <td><button type="button" onclick="updateScore(15, 3)">Triple 15</button></td>
+                </tr>
+                <tr><td><p></p></td></tr>
+                <tr>
+                    <td><button type="button" onclick="updateScore(25, 1)">Single Bull</button></td>
+                    <td><button type="button" onclick="updateScore(25, 2)">Double Bull</button></td>
+                    <td><button type="button" onclick="updateScore(0, 0)">0</button></td>
+                </tr>
+                <tr><td><p></p></td></tr>
+                <tr>
+                    <td colspan="3"><button type="button" onclick="undoDart()">Undo</button></td>
+                </tr>
+            </table>  
+        </div>
+    </body>
+</html>

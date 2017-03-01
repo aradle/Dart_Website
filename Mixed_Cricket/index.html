@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Darts Score Keeper</title>  
+        <link rel="stylesheet" href="../CSS/style_Sheet.css"/>
+        <script src="../JavaScript/mixedScript.js"></script>
+    </head>
+    
+    <body>
+        <!--This div is for the header and navigation-->
+        <div>
+            <!--Title Bar with Images-->
+            <table cellpadding = "2">
+                <tr>
+                    <td class= "titleTable">
+                       <a href="../index.html"><img src="../Images/SingleDartRight.png" alt="Dart"></a>
+                    </td>
+                    <td text-align:middle class= "titleTable">
+                        <h1>Mixed Cricket</h1>
+                    </td>
+                    <td class= "titleTable">
+                       <a href="../index.html"><img src="../Images/SingleDartLeft.png" alt="Dart"></a> 
+                    </td>
+                </tr>
+            </table>
+            
+            <!--Navigation Bar-->
+            <table class="NavBar" border="1">
+                <tr>
+                    <td width = 20%><a href="../ThreeZeroOne/index.html">301</a></td>
+                    <td width = 20%><a href="../Regular_Cricket/index.html">Cricket</a></td>
+                    <td width = 20%><a href="../Low_Ball_Cricket/index.html">Low Ball</a></td>
+                    <td width = 20%><a href="../Mixed_Cricket/index.html">Mixed</a></td>
+                    <td width = 20%><a href="../Bermuda_Triangle/index.html">Bermuda Triangle</a></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--This div is for the scoreboard-->
+        <div id="scoreboard">
+            <table id="cricketBoard">
+                <tr>
+                    <td></td>
+                    <td id="imgTD"><img src ="../Images/DartBoard.png" alt="Turn Marker" id="cP1Mark"></td>
+                    <td class="playerTitle">Player 1:</td>
+                    <td class="scoreTD"><label id="p1Score">0</label></td>
+                    <td id="img2TD"><img src ="../Images/DartBoard.png" alt="Turn Marker" id="cP2Mark" style="display:none"></td>
+                    <td class="playerTitle">Player 2:</td>
+                    <td class="scoreTD"><label id="p2Score">0</label></td>
+                    
+                </tr>
+            </table>
+            <table id="cricketBoard">
+                <tr>
+                    <td class="sideNumber"><label id="num1">0</label></td>
+                    <td colspan="3"><label id="p1num1">0</label></td>
+                    <td colspan="3"><label id="p2num1">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber"><label id="num2">0</label></td>
+                    <td colspan="3"><label id="p1num2">0</label></td>
+                    <td colspan="3"><label id="p2num2">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber"><label id="num3">0</label></td>
+                    <td colspan="3"><label id="p1num3">0</label></td>
+                    <td colspan="3"><label id="p2num3">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber"><label id="num4">0</label></td>
+                    <td colspan="3"><label id="p1num4">0</label></td>
+                    <td colspan="3"><label id="p2num4">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber"><label id="num5">0</label></td>
+                    <td colspan="3"><label id="p1num5">0</label></td>
+                    <td colspan="3"><label id="p2num5">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber"><label id="num6">0</label></td>
+                    <td colspan="3"><label id="p1num6">0</label></td>
+                    <td colspan="3"><label id="p2num6">0</label></td>
+                </tr>
+                <tr>
+                    <td class="sideNumber">Bull</td>
+                    <td colspan="3"><label id="p1BullMark">0</label></td>
+                    <td colspan="3"><label id="p2BullMark">0</label></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--This div is for the score buttons-->
+        <div id="scoreButtons">
+            <table>
+                <tr>
+                    <td id="roundTD"><label id="roundWordLabel">Round: </label></td>
+                    <td><label id="roundCountLabel">1</label></td>
+                    <td id="throwTD"><label id="throwWordLabel">Throw: </label></td>
+                    <td><label id="throwCountLabel">1</label></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><button type="button" onclick="getPoints(this.id, 1, 1)" id="x1SingleB">0</button></td>
+                    <td><button type="button" onclick="getPoints(this.id, 1, 2)" id="x2SingleB">0</button></td>
+                    <td><button type="button" onclick="getPoints(this.id, 1, 3)" id="x3SingleB">0</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="getPoints('x1SingleB', 2, 1)" id="x1DoubleB" >0</button></td>
+                    <td><button type="button" onclick="getPoints('x2SingleB', 2, 2)" id="x2DoubleB" >0</button></td>
+                    <td><button type="button" onclick="getPoints('x3SingleB', 2, 3)" id="x3DoubleB" >0</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="getPoints('x1SingleB', 3, 1)" id="x1TripleB" >0</button></td>
+                    <td><button type="button" onclick="getPoints('x2SingleB', 3, 2)" id="x2TripleB" >0</button></td>
+                    <td><button type="button" onclick="getPoints('x3SingleB', 3, 3)" id="x3TripleB" >0</button></td>
+                </tr>
+                <tr><td><p></p></td></tr>
+                <tr>
+                    <td><button type="button" onclick="getPoints(this.id, 1, 4)" id="x4SingleB">0</button></td>
+                    <td><button type="button" onclick="getPoints(this.id, 1, 5)" id="x5SingleB">0</button></td>
+                    <td><button type="button" onclick="getPoints(this.id, 1, 6)" id="x6SingleB">0</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="getPoints('x4SingleB', 2, 4)" id="x4DoubleB">0</button></td>
+                    <td><button type="button" onclick="getPoints('x5SingleB', 2, 5)" id="x5DoubleB">0</button></td>
+                    <td><button type="button" onclick="getPoints('x6SingleB', 2, 6)" id="x6DoubleB">0</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="getPoints('x4SingleB', 3, 4)" id="x4TripleB">0</button></td>
+                    <td><button type="button" onclick="getPoints('x5SingleB', 3, 5)" id="x5TripleB">0</button></td>
+                    <td><button type="button" onclick="getPoints('x6SingleB', 3, 6)" id="x6TripleB">0</button></td>
+                </tr>
+                <tr><td><p></p></td></tr>
+                <tr>
+                    <td><button type="button" onclick="getPoints('25', 1, 0)" id="25">Single Bull</button></td>
+                    <td><button type="button" onclick="getPoints('50', 2, 0)" id="50">Double Bull</button></td>
+                    <td><button type="button" onclick="getPoints('0', 0, 0)" id="0">0</button></td>
+                </tr>
+                <tr><td><p></p></td></tr>
+                <tr>
+                    <td colspan="3"><button type="button" onclick="undoDart()">Undo</button></td>
+                </tr>
+            </table>  
+        </div>
+        
+         <!--This div is to set the numbers and buttons to start the game-->
+        <div>
+            <script>
+                setNumbers();
+                setButtons();
+            </script>
+        </div>
+    </body>
+</html>

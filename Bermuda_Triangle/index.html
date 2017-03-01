@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Darts Score Keeper</title>
+        <link rel="stylesheet" href="../CSS/style_Sheet.css"/>
+        <script src="../JavaScript/bermudaScript.js"></script>
+    </head>
+    
+    <body>
+        <!--This div is for the header and navigation-->
+        <div>
+            <!--Title Bar with Images-->
+            <table cellpadding = "2">
+                <tr>
+                    <td class= "titleTable">
+                       <a href="../index.html"><img src="../Images/SingleDartRight.png" alt="Dart"></a> 
+                    </td>
+                    <td text-align:middle class= "titleTable">
+                        <h1>Bermuda Triangle</h1>
+                    </td>
+                    <td class= "titleTable">
+                       <a href="../index.html"><img src="../Images/SingleDartLeft.png" alt="Dart"></a> 
+                    </td>
+                </tr>
+            </table>
+            
+            <!--Navigation Bar-->
+            <table class="NavBar" border="1">
+                <tr>
+                    <td width = 20%><a href="../ThreeZeroOne/index.html">301</a></td>
+                    <td width = 20%><a href="../Regular_Cricket/index.html">Cricket</a></td>
+                    <td width = 20%><a href="../Low_Ball_Cricket/index.html">Low Ball</a></td>
+                    <td width = 20%><a href="../Mixed_Cricket/index.html">Mixed</a></td>
+                    <td width = 20%><a href="../Bermuda_Triangle/index.html">Bermuda Triangle</a></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--This div is for the scoreboard-->
+        <div id="scoreboard">
+            <table id="cricketBoard">
+                <tr>
+                    <td id="imgTD"><img src ="../Images/DartBoard.png" alt="Turn Marker" id="cP1Mark"></td>
+                    <td class="playerTitle">Player 1:</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="scoreTD" colspan="2"><label id="p1Score">0</label></td>
+                </tr>
+                <tr>
+                    <td id="img2TD"><img src ="../Images/DartBoard.png" alt="Turn Marker" id="cP2Mark" style="display:none"></td>
+                    <td class="playerTitle">Player 2:</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="scoreTD" colspan="2"><label id="p2Score">0</label></td>
+                </tr>
+            </table>
+        </div>
+    
+        <!--This div is for the score button(s)-->
+        <div id="scoreButtons">
+            <table>
+                <tr>
+                    <td colspan="2">Throw:</td>
+                    <td><label id="throwCountLabel">1</label></td>
+                    <td><button id="undoButton" onclick="undoTurn()">Undo Throw</button></td>
+                </tr>
+                <tr>
+                    <td colspan = 4><label id="TheNumber">12</label></td>
+                </tr>
+                <tr>
+                    <td><button id="singleB" onclick="hitThis(1)">Single</button></td>
+                    <td><button id="doubleB" onclick="hitThis(2)">Double</button></td>
+                    <td><button id="tripleB" onclick="hitThis(3)">Triple</button></td>
+                    <td><button onclick="hitThis(0)">No Hit</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--This div is for the double buttons-->
+        <div id="doubleButtonsDiv" style="display:none">
+            <table>
+                <tr>
+                    <td><button onclick="doubleHit(1)">Double 1</button></td>
+                    <td><button onclick="doubleHit(2)">Double 2</button></td>
+                    <td><button onclick="doubleHit(3)">Double 3</button></td>
+                    <td><button onclick="doubleHit(4)">Double 4</button></td>
+                    <td><button onclick="doubleHit(5)">Double 5</button></td>
+                    <td><button onclick="doubleHit(6)">Double 6</button></td>
+                    <td><button onclick="doubleHit(7)">Double 7</button></td>
+                    <td><button onclick="doubleHit(8)">Double 8</button></td>
+                    <td><button onclick="doubleHit(9)">Double 9</button></td>
+                    <td><button onclick="doubleHit(10)">Double 10</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="doubleHit(11)">Double 11</button></td>
+                    <td><button onclick="doubleHit(12)">Double 12</button></td>
+                    <td><button onclick="doubleHit(13)">Double 13</button></td>
+                    <td><button onclick="doubleHit(14)">Double 14</button></td>
+                    <td><button onclick="doubleHit(15)">Double 15</button></td>
+                    <td><button onclick="doubleHit(16)">Double 16</button></td>
+                    <td><button onclick="doubleHit(17)">Double 17</button></td>
+                    <td><button onclick="doubleHit(18)">Double 18</button></td>
+                    <td><button onclick="doubleHit(19)">Double 19</button></td>
+                    <td><button onclick="doubleHit(20)">Double 20</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!--This div is for the triple buttons-->
+        <div id="tripleButtonsDiv" style="display:none">
+            <table>
+                <tr>
+                    <td><button onclick="tripleHit(1)">Triple 1</button></td>
+                    <td><button onclick="tripleHit(2)">Triple 2</button></td>
+                    <td><button onclick="tripleHit(3)">Triple 3</button></td>
+                    <td><button onclick="tripleHit(4)">Triple 4</button></td>
+                    <td><button onclick="tripleHit(5)">Triple 5</button></td>
+                    <td><button onclick="tripleHit(6)">Triple 6</button></td>
+                    <td><button onclick="tripleHit(7)">Triple 7</button></td>
+                    <td><button onclick="tripleHit(8)">Triple 8</button></td>
+                    <td><button onclick="tripleHit(9)">Triple 9</button></td>
+                    <td><button onclick="tripleHit(10)">Triple 10</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="tripleHit(11)">Triple 11</button></td>
+                    <td><button onclick="tripleHit(12)">Triple 12</button></td>
+                    <td><button onclick="tripleHit(13)">Triple 13</button></td>
+                    <td><button onclick="tripleHit(14)">Triple 14</button></td>
+                    <td><button onclick="tripleHit(15)">Triple 15</button></td>
+                    <td><button onclick="tripleHit(16)">Triple 16</button></td>
+                    <td><button onclick="tripleHit(17)">Triple 17</button></td>
+                    <td><button onclick="tripleHit(18)">Triple 18</button></td>
+                    <td><button onclick="tripleHit(19)">Triple 19</button></td>
+                    <td><button onclick="tripleHit(20)">Triple 20</button></td>
+                </tr>
+            </table>
+        </div>  
+    </body>
+</html>
+
+
+
+
